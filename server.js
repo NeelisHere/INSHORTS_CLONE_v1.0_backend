@@ -12,7 +12,11 @@ const app = express()
 
 connectDB()
 
-app.use(cors())
+// app.use(cors())
+app.use(cors({
+    origin: 'https://inshorts-clone-v1-0-frontend.vercel.app/'
+}));
+
 app.use('/api/v1', route)
 
 
